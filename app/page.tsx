@@ -24,7 +24,7 @@ export default function Home() {
             </a>
             <a
               className="rounded-xl border border-zinc-700 px-4 py-2 text-sm"
-              href="www.linkedin.com/in/abolaji-oyinloye-764ab0133"
+              href="https://www.linkedin.com/in/abolaji-oyinloye-764ab0133"
               target="_blank"
               rel="noreferrer"
             >
