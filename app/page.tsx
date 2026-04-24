@@ -1,86 +1,72 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white px-6 py-12">
-
-{/* NAVBAR */}
-<nav className="flex justify-between items-center mb-10">
-  <h1 className="text-xl font-bold">AO</h1>
-
-  <div className="flex gap-6 text-gray-400">
-    <a href="#projects" className="hover:text-white">Projects</a>
-    <a href="#contact" className="hover:text-white">Contact</a>
-  </div>
-</nav>
-      {/* HERO */}
-      <section className="text-center mt-20 mb-20">
-        <h1 className="text-6xl font-bold mb-4 tracking-tight">
-          Abolaji Habeeb Oyinloye
-        </h1>
-        <p className="text-gray-400 text-xl mb-6">
-          AI / Backend Engineer (Python, FastAPI)
-        </p>
-
+    <main className="min-h-screen bg-[#0a0a0a] text-white px-6 py-12">
+      <nav className="flex justify-between items-center mb-10 max-w-5xl mx-auto">
+        <h1 className="text-xl font-bold tracking-tight">AHO</h1>
+        <div className="flex gap-6 text-gray-400 text-sm">
+          <a href="#about" className="hover:text-white">About</a>
+          <a href="#projects" className="hover:text-white">Projects</a>
+          <a href="#contact" className="hover:text-white">Contact</a>
+        </div>
+      </nav>
+      <section className="text-center mt-20 mb-24 max-w-3xl mx-auto">
+        <p className="text-sm text-emerald-400 font-medium mb-4 uppercase">Open to Remote Roles</p>
+        <h1 className="text-5xl font-bold mb-4">Abolaji Habeeb Oyinloye</h1>
+        <p className="text-gray-400 text-xl mb-8">Backend and AI Engineer — FastAPI · Python · JWT · PostgreSQL</p>
         <div className="flex justify-center gap-4">
-          <a 
-  href="#projects"
-  className="bg-white text-black px-6 py-2 rounded-lg font-semibold"
->
-  View Projects
-</a>
-          <button className="border border-gray-600 px-6 py-2 rounded-lg">
-            Contact Me
-          </button>
+          <a href="#projects" className="bg-white text-black px-6 py-2 rounded-lg font-semibold">View Projects</a>
+          <a href="#contact" className="border border-gray-600 px-6 py-2 rounded-lg">Contact Me</a>
         </div>
       </section>
-
-      {/* PROJECTS */}
-      <section id="projects" className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-6">Projects</h2>
-
-        <div className="grid gap-6">
-          <div className="bg-gray-900 p-6 rounded-xl hover:scale-105 transition">
-            <h3 className="text-xl font-bold mb-2">Auth Service API</h3>
-            <p className="text-gray-400 mb-3">
-              Backend API with authentication using JWT and database integration.
-            </p>
-
-            <a 
-              href="https://github.com/Abolajioyin/auth-service"
-              target="_blank"
-              className="text-white underline"
-            >
-              View Project →
-            </a>
-
+      <section id="about" className="max-w-3xl mx-auto mb-24">
+        <h2 className="text-3xl font-semibold mb-6">About</h2>
+        <div className="bg-gray-900 rounded-xl p-6 text-gray-300 space-y-4">
+          <p>I hold a Petroleum Engineering degree from the University of Lagos and spent 5 years travelling the world before finding my direction in tech. I am now a third-year Computer Science student at the University of Northern British Columbia.</p>
+          <p>I do not wait for permission to build. I ship real systems and am actively working toward a full-time engineering role at a startup.</p>
+          <div className="flex flex-wrap gap-2 pt-2">
+            {["Python", "FastAPI", "JWT", "PostgreSQL", "SQLAlchemy", "HuggingFace", "REST APIs"].map((skill) => (
+              <span key={skill} className="bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-full">{skill}</span>
+            ))}
           </div>
         </div>
       </section>
-
-      {/* CONTACT */}
-<section id="contact" className="max-w-4xl mx-auto mt-20">
-  <h2 className="text-3xl font-semibold mb-6">Contact</h2>
-
-  <div className="flex flex-col gap-3 text-gray-400">
-    <p>Email: your@email.com</p>
-
-    <a 
-      href="https://github.com/YOUR_USERNAME"
-      target="_blank"
-      className="hover:text-white"
-    >
-      GitHub
-    </a>
-
-    <a 
-      href="https://www.linkedin.com/in/YOUR_USERNAME"
-      target="_blank"
-      className="hover:text-white"
-    >
-      LinkedIn
-    </a>
-  </div>
-</section>
-
+      <section id="projects" className="max-w-3xl mx-auto mb-24">
+        <h2 className="text-3xl font-semibold mb-6">Projects</h2>
+        <div className="grid gap-6">
+          <div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
+            <div className="flex items-start justify-between mb-3">
+              <h3 className="text-xl font-bold">Auth and AI Inference API</h3>
+              <span className="text-xs bg-emerald-900 text-emerald-400 px-2 py-1 rounded-full">Live</span>
+            </div>
+            <p className="text-gray-400 mb-4">Production-style backend API with JWT authentication, protected routes, and AI model inference built with FastAPI and deployed on Render.</p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {["FastAPI", "Python", "JWT", "PostgreSQL", "HuggingFace"].map((tag) => (
+                <span key={tag} className="bg-gray-800 text-gray-400 text-xs px-2 py-1 rounded">{tag}</span>
+              ))}
+            </div>
+            <div className="flex gap-4">
+              <a href="https://auth-service-5ilo.onrender.com/docs" target="_blank" className="text-emerald-400 text-sm hover:underline">Live Demo</a>
+              <a href="https://github.com/Abolajioyin/auth-service" target="_blank" className="text-gray-400 text-sm hover:underline">GitHub</a>
+            </div>
+          </div>
+          <div className="bg-gray-900 p-6 rounded-xl border border-dashed border-gray-700 opacity-50">
+            <h3 className="text-xl font-bold mb-2">Next Project</h3>
+            <p className="text-gray-500 text-sm">Coming soon — currently building.</p>
+          </div>
+        </div>
+      </section>
+      <section id="contact" className="max-w-3xl mx-auto mb-12">
+        <h2 className="text-3xl font-semibold mb-6">Contact</h2>
+        <div className="bg-gray-900 rounded-xl p-6">
+          <p className="text-gray-400 mb-6">Open to remote startup roles in backend and AI engineering.</p>
+          <div className="flex flex-col gap-3">
+            <a href="mailto:your@email.com" className="text-gray-300 hover:text-white">Email: bolajioyinloye@yahoo.com</a>
+            <a href="https://github.com/Abolajioyin" target="_blank" className="text-gray-300 hover:text-white">GitHub: github.com/Abolajioyin</a>
+            <a href="https://www.linkedin.com/in/abolaji-oyinloye-764ab0133" target="_blank" className="text-gray-300 hover:text-white">LinkedIn: Abolaji Oyinloye</a>
+          </div>
+        </div>
+      </section>
+      <footer className="text-center text-gray-600 text-sm mt-12">Built by Abolaji Habeeb Oyinloye</footer>
     </main>
   );
 }
