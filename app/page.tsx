@@ -10,7 +10,6 @@ export default function Home() {
         </div>
       </nav>
       <section className="text-center mt-20 mb-24 max-w-3xl mx-auto">
-        <p className="text-sm text-emerald-400 font-medium mb-4 uppercase">Open to Remote Roles</p>
         <h1 className="text-5xl font-bold mb-4">Abolaji Habeeb Oyinloye</h1>
         <p className="text-gray-400 text-xl mb-8">Backend and AI Engineer — FastAPI · Python · JWT · PostgreSQL</p>
         <div className="flex justify-center gap-4">
@@ -21,8 +20,14 @@ export default function Home() {
       <section id="about" className="max-w-3xl mx-auto mb-24">
         <h2 className="text-3xl font-semibold mb-6">About</h2>
         <div className="bg-gray-900 rounded-xl p-6 text-gray-300 space-y-4">
-          <p>I hold a Petroleum Engineering degree from the University of Lagos and spent 5 years travelling the world before finding my direction in tech. I am now a third-year Computer Science student at the University of Northern British Columbia.</p>
-          <p>I do not wait for permission to build. I ship real systems and am actively working toward a full-time engineering role at a startup.</p>
+          <p>Backend and AI Engineer with a non-traditional path — Petroleum Engineering graduate
+            from the University of Lagos, now a Computer Science student at UNBC.</p>
+          <p>I build production-ready backend systems and AI inference APIs using Python, FastAPI,
+            JWT authentication, and PostgreSQL. My work focuses on designing secure, scalable APIs
+            and deploying real-world systems.</p>
+          <p className="text-emerald-400 font-medium">
+          Currently open to remote startup roles in backend and AI engineering.
+          </p>  
           <div className="flex flex-wrap gap-2 pt-2">
             {["Python", "FastAPI", "JWT", "PostgreSQL", "SQLAlchemy", "HuggingFace", "REST APIs"].map((skill) => (
               <span key={skill} className="bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-full">{skill}</span>
